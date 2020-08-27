@@ -19,7 +19,12 @@
 
 i = [50000, 10000, 5000, 1000, 500, 100, 50, 10, 5, 1]
 
-inp = int(input('금액 : '))
+gold = int(input('금액 : '))
 
 
-
+for k in i:
+    if gold // k >= 1 :
+        print('{}원 : {}개'.format(k, gold//k))
+        gold = gold % k
+    else:
+        continue
