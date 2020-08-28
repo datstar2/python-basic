@@ -15,13 +15,15 @@
 #
 # 실행 결과:
 #
-# ‘/usr/local/‘bin’, ‘python’
+# ‘/usr/local/bin’, ‘python’
 #
 #
 #
 #  split 사용
-#
-#
-#
 
+
+s = '/usr/local/bin/python'
+dt=s.split('/')
+print(dt)
+print('\'{}/{}/{}/{}\',  \'{}\''.format(dt[0],dt[1],dt[2],dt[3],dt[4]))
 

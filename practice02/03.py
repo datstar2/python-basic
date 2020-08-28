@@ -4,10 +4,23 @@
 # 없이 각 단어를 순서대로 출력하세요
 #
 #
-# s = """We encourage everyone to contribute to Python. If you still have questions after reviewing the material
-# in this guide, then the Python Mentors group is available to help guide new contributors through the process."""
-#
-#
+s = """We encourage everyone to contribute to Python. If you still have questions after reviewing the material
+in this guide, then the Python Mentors group is available to help guide new contributors through the process."""
+
+
+ss = [',', '.','\n']
+
+print(ss)
+
+sss=str()
+
+for k in ss:
+    sss=s.replace(k, '')
+
+print(sss)
+
+
+
 # 실행 결과:
 # AFTER
 # AVAILABLE
