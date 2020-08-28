@@ -23,7 +23,7 @@ gold = int(input('금액 : '))
 
 
 for k in i:
-    if gold // k >= 1 :
+    if gold // k >= 1:
         print('{}원 : {}개'.format(k, gold//k))
         gold = gold % k
     else:

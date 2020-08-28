@@ -52,6 +52,10 @@ age = 30
 print("name: " + format(name, 's') + ',age:  ', format(age, 'd'))
 
 
+# format() 객체 함수
+print('name : {0}, age : {1}'.format(name, age))
+
+
 print('============== 객체함수 ==================')
 s8 = 'i like Python'
 print(s8.upper())
@@ -70,7 +74,73 @@ print(s9.find('Like', 5))
 print(s9.find('Javascript'))
 print(s9.rfind('Like'))
 
+# index()는 발견하지 못하면 예외가 발생한다.
+try:
+    s9.index('JavaScript')
+except ValueError as ex:
+    print('index()는 발견하지 못하면 예외가 발생한다.')
+    # 예외
+    # 1.로그를 남긴다.
+    # 2. 사용자한테 사과
+    # 3. 정상종료
 
+# 편집과 치환
+s10 = '    spam and ham    '
+print('-----------' + s10.strip() + '------------')
+print('-----------' + s10.rstrip() + '------------')
+print('-----------' + s10.lstrip() + '------------')
+
+s11 = '<><abc><><defg><><>'
+print('-----------' + s11.strip('<>') + '------------')
+
+# replace는 가운데것 까지 적용
+s12 = 'Hello Java Java Java'
+print('-----------' + s12.replace('Java', '') + '------------')
+
+
+# 정렬
+s13 = 'King and Queen'
+print('---' + s13.center(30) + '---')
+print('---' + s13.ljust(30) + '---')
+print('---' + s13.rjust(30) + '---')
+
+# 분리
+s14 = 'spam and ham'
+r = s14.split(' and ')
+print(r, type(r))
+
+s15 = 'one:two:three:four'
+r = s15.split(':')
+print(r)
+
+
+r = s15.split(':', 2)
+print(r)
+
+lines='''line1
+line2
+line3
+line4
+'''
+
+r = lines.split('\n')
+print(r)
+
+r = lines.splitlines()
+print(r)
+
+# vksquf
+
+print("1234".isdigit())
+print("abcd".isalpha())
+print("1234".isalpha())
+print("abcd".isdigit())
+print("abcd".isupper())
+print("abcd".islower())
+print(" ".isspace())
+print("\n".isspace())
+print("\t".isspace())
+print("".isspace())
 
 # str 객체는 변경할 수 없다
 # s10 = "Hello"
@@ -83,3 +153,5 @@ l1[0] = 'HELLO'
 print(l1)
 l1.append('Python')
 print(l1)
+
+
