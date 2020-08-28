@@ -17,4 +17,4 @@ numbers = [int(input(i)) for i in range(0, 5)]
 for k in numbers:
     sums += k
 
-print('평균 : {}'.format((sums/5)))
+print('평균 : {}'.for1mat((sums/5)))

@@ -8,16 +8,18 @@ s = """We encourage everyone to contribute to Python. If you still have question
 in this guide, then the Python Mentors group is available to help guide new contributors through the process."""
 
 
-ss = [',', '.','\n']
 
-print(ss)
+ss=s.replace('\n', ' ')
+sss=ss.split(' ')
+sss.sort()
+ddd = set(sss)
+print(ddd)
 
-sss=str()
+for k in ddd:
+    print(k, ':', s.count(k))
 
-for k in ss:
-    sss=s.replace(k, '')
 
-print(sss)
+
 
 
 

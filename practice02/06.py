@@ -27,4 +27,32 @@
 # 7>>57
 # 맞았습니다.
 # 다시 하시겠습니까(y/n)>>n
-
+import sys
+k = int(input())
+counts = 0
+print('수를 결정하였습니다. 맞추어 보세요')
+w=str
+i = 0
+print('1-100')
+while True:
+    i += 1
+    print('{}>>'.format(i), end='')
+    counts = int(input())
+    if counts == k:
+        print('맞았습니다.')
+        w=input('다시 하겠습니까(y/n)?')
+        if w == 'n':
+            sys.exit()
+        else:
+            i = 0
+            k = int(input())
+            counts = 0
+            print('수를 결정하였습니다. 맞추어 보세요')
+            print('1-100')
+            continue
+    elif counts < k:
+        print('더 높게')
+        continue
+    else:
+        print('더 낮게')
+        continue

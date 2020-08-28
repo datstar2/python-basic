@@ -22,3 +22,16 @@
 # 36 짝짝
 # 37 짝
 
+counts = 0
+
+for k in range(1,100):
+    if str(k).count('3') > 0 or str(k).count('6') > 0 or str(k).count('9') > 0:
+        counts += str(k).count('3')
+        counts += str(k).count('6')
+        counts += str(k).count('9')
+        print(k, '짝'*counts)
+        counts = 0
+    else:
+        continue
+
+
