@@ -34,5 +34,9 @@ s = """
     </body>
 </html>"""
 
-s.strip(<>/)
-
+k = s.split(">")
+print(k)
+print(k[5])
+a= k[3][:5]
+b=
+print(a)
