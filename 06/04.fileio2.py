@@ -15,4 +15,28 @@ text = f.read()
 print(text)
 
 # line 단위로 읽기
-open('fileio2.py', 'rt', encoding='utf-8')
+linenum = 0
+f1 = open('04.fileio2.py', 'rt', encoding='utf-8')
+while True:
+    line = f1.readline()
+    if line == '':
+        f1.close()
+        break
+    linenum += 1
+    print(f'{linenum}{line}', end=' ')
+
+
+# line 단위로 읽기 2
+f2 = open('04.fileio2.py', 'rt', encoding='utf-8')
+lines = f2.readlines()
+f2.close()
+
+for linenum, line in enumerate(lines):
+    print(f'{linenum+1}{line}' , end=' ')
+
+#with ~ as (자원정리를 자동으로 해준다)
+
+with open('04.fileio2.py', 'rt', encoding='utf-8') as f3:
+    lines = f3.readlines()
+    for linenum, line in enumerate(lines):
+        print(f'{linenum + 1}{line}', end=' ')

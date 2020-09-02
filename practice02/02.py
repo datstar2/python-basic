@@ -35,8 +35,12 @@ s = """
 </html>"""
 
 k = s.split(">")
-print(k)
-print(k[5])
+
 a= k[3][:5]
-b=
+b= k[5][:4]
+c= k[7][:-3]
+
 print(a)
+print(b)
+print(c)
+
