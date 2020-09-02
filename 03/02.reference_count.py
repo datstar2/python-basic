@@ -4,7 +4,6 @@ x = object()
 print(type(x))
 print(sys.getrefcount(x))
 
-
 y = x
 print(sys.getrefcount(x))
 
@@ -12,4 +11,6 @@ print(sys.getrefcount(x))
 del x
 print(sys.getrefcount(y))
 print(globals())
+
+
 
